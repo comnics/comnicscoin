@@ -20,7 +20,6 @@ const express = require("express"),
 
     app.post("/blocks", (req, res) => {
         const { body: { data } } = req;
-        console.log("request : ", req);
         const newBlock = createNewBlock(data);
         res.send(newBlock);
     });
