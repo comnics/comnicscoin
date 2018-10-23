@@ -5,10 +5,6 @@ GET http://localhost:3000/blocks
 POST http://localhost:3000/blocks
 Content-Type: application/json
 
-{
-    "data": "Third Block!!!"
-}
-
 ###
 
 POST http://localhost:3000/peers
@@ -17,3 +13,26 @@ Content-Type: application/json
 {
     "peer": "ws://localhost:5000"
 }
+
+###
+GET http://localhost:3000/me/balance
+
+###
+GET http://localhost:3000/me/address
+
+###
+
+POST http://localhost:3000/transactions
+Content-Type: application/json
+
+{
+    "address": "04dae6423504d47f6ff18e1470f874507f3aa75d22997e9bbf9124456372d24cd83ee9d4c323b5ce37914a1a28114467e3d94d95a60033fe5bf176be4b5c040322",
+    "amount": 10
+}
+
+###
+GET http://localhost:3000/utxo
+
+###
+GET http://localhost:3000/mempool
+
