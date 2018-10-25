@@ -1,6 +1,7 @@
 const express = require("express"),
     bodyParser = require("body-parser"),
     morgan = require("morgan"),
+    cors = require("cors"),
     Blockchain = require("./blockchain"),
     P2P = require("./p2p"),
     wallet = require("./wallet"),
@@ -17,6 +18,7 @@ const express = require("express"),
 
     const app = express();
     app.use(bodyParser.json());
+    app.use(cors());
     app.use(morgan("combined"));
 
     app.route("/blocks")
