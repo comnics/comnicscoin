@@ -79,7 +79,7 @@ const initSocketConnection = ws => {
     handleSocketError(ws);
     sendMessage(ws, getLatest());
     setTimeout(() => {
-        sendMessageToAll(ws, getAllMempool());
+        sendMessageToAll(getAllMempool());
     }, 1000);
 
     setInterval(() => {
